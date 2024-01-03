@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mobile-nav">
+        
+        <div class="mobile-nav-header">
+            <p>Logo</p>
+            <button class="togglebtn" onclick="toggleMenu()"></button>
+        </div>
+        
+        
+        <!-- <ul>
+            <li class="menu-item">
+                <a href="#">
+                    Dashboard
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#">
+                    Profile
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#">
+                    Items
+                </a>
+            </li>
+
+        </ul> -->
+    </div>
+
+    <div class="parent">
+        <!-- This is the side menu -->
+        <div class="side">
+            <ul>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="assets/icons/icon.svg" alt="icons" />
+                        Dashboard
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="assets/icons/icon.svg" alt="icons" />
+                        Profile
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="assets/icons/icon.svg" alt="icons" />
+                        Items
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- This is the main dashboard area -->
+        <div class="main-view">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+
+        /* Explain better here */
+
+        .parent {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            gap: 10px;
+        }
+
+        .parent>div {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(235, 235, 235);
+        }
+
+        .side {
+            background: black !important;
+            color: white;
+            padding: 50px;
+        }
+
+        .side a {
+            all: unset
+        }
+
+        .side>ul {
+            display: grid;
+            gap: 20px;
+        }
+
+        .side>ul>li {
+            list-style: none;
+        }
+
+        .menu-item>a {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .side>* {
+            color: white
+        }
+
+        .main-view {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .main-view div {
+            border-radius: 20px;
+            border: .5px solid black;
+            background-color: white;
+            height: 200px;
+            width: 100%;
+        }
+
+        @media (max-width: 1000px) {
+            .parent {
+                grid-template-columns: 1fr
+            }
+
+            .side {
+                display: none;
+            }
+
+            /* start of mobile nav */
+
+        .mobile-nav {
+            height: 100px;
+            width: 100%;
+            padding-top: 2em;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+        }
+        
+        .mobile-nav > ul {
+            display: grid;
+            gap: 40px;
+        }
+
+        .mobile-nav > ul > li { 
+            list-style: none;
+        }
+
+        .mobile-nav  a {
+            all: unset;
+            cursor: pointer;
+            font-size: 32px;
+        }
+
+        .mobile-nav  a:hover {
+            color: #4a4a4a;
+        }
+
+        .mobile-nav .menu-item {
+            display: flex;
+            justify-content: center;
+        } 
+
+        .mobile-nav-header {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            height: 100%;
+            padding: 10px;
+            align-items: center;
+        }
+        
+        .mobile-nav-header  button {
+            background-image: url('assets/icons/hamburger-menu.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: white;
+            border: none;
+            height: 32px;
+            width: 32px
+
+        }
+
+
+        /* end of mobile nav */
+        }
+    </style>
+
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
